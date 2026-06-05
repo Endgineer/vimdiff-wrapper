@@ -86,51 +86,45 @@ if __name__ == '__main__':
         '.DiffAdd { background-color: #493F2D; padding-bottom: 1px; }',
     )
 
-    if paths[0].suffix == '.json':
-        html_str = html_str.replace(
-            '.Constant { color: #c00000; }',
-            '.Constant { color: #A5D6FF; }',
-        )
+    html_str = html_str.replace(
+        '.Identifier { color: #008080; }',
+        '.Identifier { color: #D2A8FF; }',
+    )
 
-        html_str = html_str.replace(
-            '.Special { color: #c000c0; }',
-            '.Special { color: #F0D700; }',
-        )
+    html_str = html_str.replace(
+        '.Statement { color: #af5f00; }',
+        '.Statement { color: #C586C0; }',
+    )
 
-        html_str = html_str.replace(
-            '.Statement { color: #af5f00; }',
-            '.Statement { color: #7EE769; }',
-        )
-    elif paths[0].suffix == '.py':
-        html_str = html_str.replace(
-            '.Identifier { color: #008080; }',
-            '.Identifier { color: #D2A8FF; }',
-        )
+    html_str = html_str.replace(
+        '.Special { color: #c000c0; }',
+        '.Special { color: #D79539; }',
+    )
 
-        html_str = html_str.replace(
-            '.Statement { color: #af5f00; }',
-            '.Statement { color: #C586C0; }',
-        )
+    html_str = html_str.replace(
+        '.Type { color: #008000; }',
+        '.Type { color: #4EC9B0; }',
+    )
 
-        html_str = html_str.replace(
-            '.Special { color: #c000c0; }',
-            '.Special { color: #D79539; }',
-        )
+    html_str = html_str.replace(
+        '.PreProc { color: #c000c0; }',
+        '.PreProc { color: #C586C0; }',
+    )
 
-        html_str = html_str.replace(
-            '.Type { color: #008000; }',
-            '.Type { color: #4EC9B0; }',
-        )
+    html_str = html_str.replace(
+        '.Constant { color: #c00000; }',
+        '.Constant { color: #A5D6FF; }',
+    )
 
-        html_str = html_str.replace(
-            '.PreProc { color: #c000c0; }',
-            '.PreProc { color: #C586C0; }',
-        )
+    html_str = html_str.replace(
+        '.Comment { color: #0000c0; }',
+        '.Comment { color: #8B949E; }',
+    )
 
-        html_str = html_str.replace(
-            '.Constant { color: #c00000; }',
-            '.Constant { color: #A5D6FF; }',
-        )
+    html_str = html_str.replace(
+        '.Error { color: #ffffff; background-color: #ff6060; padding-bottom: 1px; }',
+        '.Error { color: #ff6060; background-color: #121314; padding-bottom: 1px; font-weight: bold; }',
+    )
 
     html_strs = html_str.splitlines(True)
     for i, html_str in enumerate(html_strs):
